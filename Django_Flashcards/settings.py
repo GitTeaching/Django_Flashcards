@@ -78,7 +78,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Django_Flashcards.wsgi.application'
 
 
-# Database : username : admin, password: default / TestUser, default123
+# Database 
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
