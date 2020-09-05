@@ -8,9 +8,9 @@ It uses :
  - Django Framework
  - SQLite in local and PostgreSQL in production
  
- ### Deployed in Heroku : https://djangoflashcardsmaker.herokuapp.com/
+ #### Deployed in Heroku : https://djangoflashcardsmaker.herokuapp.com/
 
-### Some Screentshots : 
+#### Some Screentshots : 
 
 UI from listings cards and learning. You can login/register to add cards, edit cards, mak cards, etc. 
 
