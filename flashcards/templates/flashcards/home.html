@@ -1,0 +1,69 @@
+
+{% extends "flashcards/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+	{% for card in page_obj %}           
+	    <div class="row pt-md-4">
+	        <div class="col-md-12">
+	            <div class="blog-entry ftco-animate d-md-flex">
+	                <a href="#" class="img img-2" style="background-image: url({% static 'images/' %}{{card.category}}1.png );"></a>
+	                <div class="text text-2 pl-md-4">
+	                  <h5 class="mb-2"><a href="#" style="color: rgba(0, 0, 0, 0.8);"><strong>{{ card.front }}</strong></a></h5>
+
+	                  <p class="mb-4">{{ card.back }}.</p>
+	                  <p>
+	                  	<a href="{% url 'mark_liked' card.id %}" class="btn btn-primary btn-sm"><i class="fa fa-heart"></i></a>
+	                  	&nbsp &nbsp &nbsp 
+	                  	<a href="{% url 'edit_card' card.id %}" class="btn-custom">Edit Card <span class="ion-ios-arrow-forward"></span></a>
+	                  </p>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <hr>
+	{% endfor %}
+
+ <!--    <div class="row">
+      <div class="col">
+        <div class="block-27">
+          <ul>
+            <li><a href="#">&lt;</a></li>
+            <li class="active"><span>1</span></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&gt;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="row">
+      <div class="col">
+        <div class="block-27">
+	        <div class="pagination">
+			    <span class="step-links">
+			        {% if page_obj.has_previous %}
+			            <a href="?page=1">&lt; first</a>
+			            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+			        {% endif %}
+
+			        <span class="current">
+			            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+			        </span>
+
+			        {% if page_obj.has_next %}
+			            <a href="?page={{ page_obj.next_page_number }}">next</a>
+			            <a href="?page={{ page_obj.paginator.num_pages }}">last &gt;</a>
+			        {% endif %}
+			    </span>
+			</div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

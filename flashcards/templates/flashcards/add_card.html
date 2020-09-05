@@ -1,0 +1,25 @@
+
+{% extends "flashcards/base.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+	
+	<div class="row pt-md-4">
+        <div class="col-md-12">
+            <div class="blog-entry ftco-animate d-md-flex">
+                <div class="form-group">
+					<form method="POST" action="">
+						{% csrf_token %}
+						{{ form|crispy }}
+						<input class="btn btn-primary" type="submit" name="Submit" value="Submit">
+					</form>
+				</div>
+				
+            </div>
+        </div>
+	</div>
+
+{% endblock %}
