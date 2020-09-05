@@ -1,2 +1,2 @@
-*.py linguist-language=Solidity
+*.py linguist-detectable=true
 *.css linguist-detectable=false
