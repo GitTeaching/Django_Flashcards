@@ -16,6 +16,10 @@ UI from listings cards and learning. You can login/register to add cards, edit c
 
 <img src="https://github.com/GitTeaching/Django_Flashcards/blob/master/Django_Flashcards/static/images/Screenshot%201.png" width="700">
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
 <img src="https://github.com/GitTeaching/Django_Flashcards/blob/master/Django_Flashcards/static/images/Screenshot%202.png" width="700">
+
+---------------------------------------------------------------------------------------------------------------------------------------
 
 <img src="https://github.com/GitTeaching/Django_Flashcards/blob/master/Django_Flashcards/static/images/Screenshot%203.png" width="700">
